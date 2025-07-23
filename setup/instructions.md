@@ -1,4 +1,4 @@
-# Setup Instructions for Post-Quantum OpenSSL Seminar
+# Setup Instructions for Post-Quantum OpenSSL Exercises
 
 This setup script installs the necessary dependencies and builds the [Open Quantum Safe (OQS)](https://openquantumsafe.org/) libraries, which extend OpenSSL with post-quantum cryptographic algorithms.
 

@@ -43,3 +43,15 @@ openssl list -signature-algorithms
 openssl list -cipher-algorithms
 ```
 
+---
+##  Final Verification Commands
+
+After editing the config file, confirm everything works with:
+
+```
+openssl list -providers
+openssl list -signature-algorithms -provider oqsprovider
+```
+You should see ```oqsprovider``` listed and quantum-safe algorithms like falcon512 or dilithium3.
+
+

@@ -19,7 +19,7 @@ This exercise shows how to generate a post-quantum certificate using the **MLDSA
 ###  Step 1: Generate a Root CA Certificate
 
 ```bash
-openssl req -x509 -new -newkey mldsa44_rsa2048 -keyout root_CA.key -out root_CA.crt -nodes -subj "/CN=test CA" -days 365
+openssl req -x509 -new -newkey rsa3072_mldsa44 -keyout root_CA.key -out root_CA.crt -nodes -subj "/CN=test CA" -days 365
 openssl x509 -in root_CA.crt -text -noout
 ```
 
@@ -28,7 +28,7 @@ openssl x509 -in root_CA.crt -text -noout
 ### Step 2: Generate Alice's Key and Certificate Signing Request (CSR)
 
 ```bash
-openssl genpkey -algorithm mldsa44_rsa2048 -out alice_private.key
+openssl genpkey -algorithm rsa3072_mldsa44 -out alice_private.key
 openssl req -new -key alice_private.key -out A-req.csr
 ```
 
@@ -43,4 +43,4 @@ openssl x509 -in A.crt -text -noout
 
 ---
 
-Alice now has a **post-quantum-safe certificate** signed by a hybrid MLDSA root CA!
+Alice now has a **post-quantum-safe certificate** signed by a hybrid ML-DSA, RSA root CA!

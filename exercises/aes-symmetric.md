@@ -47,8 +47,8 @@ cd ../Bob
 ## Verify and Decrypt
 
 ```bash
-sha256sum -c message.txt.sha256
 openssl enc -d -aes-256-cbc -salt -in message.enc -out message.txt -pass pass:password
+sha256sum -c message.txt.sha256
 ```
 
 ---

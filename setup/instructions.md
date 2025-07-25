@@ -2,6 +2,20 @@
 
 This setup script installs the necessary dependencies and builds the [Open Quantum Safe (OQS)](https://openquantumsafe.org/) libraries, which extend OpenSSL with post-quantum cryptographic algorithms.
 
+--- 
+## Running the script
+
+Once you have downloaded the script into your system make sure that it is executable by running the following
+
+```
+chmod +x install_oqs.sh
+```
+
+Then run it by typing the following:
+
+```
+./install_oqs.sh
+```
 
 ---
 
